@@ -1,6 +1,6 @@
 {
   "name": "gads-transparency-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for Google Ads Transparency Center - free competitive ad intelligence",
   "main": "dist/index.js",
   "type": "module",
