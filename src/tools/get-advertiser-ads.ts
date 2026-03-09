@@ -43,6 +43,12 @@ Use this tool to:
 - Track ad activity across different platforms
 
 Returns ad creatives with headlines, descriptions, thumbnails, and run dates.`,
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: true,
+  },
   inputSchema: {
     type: 'object' as const,
     properties: {

@@ -10,7 +10,9 @@
   "files": [
     "dist/",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "PRIVACY.md",
+    "manifest.json"
   ],
   "scripts": {
     "build": "tsc",

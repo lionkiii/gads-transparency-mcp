@@ -33,6 +33,12 @@ Use this tool to:
 - Identify which platforms they advertise on
 
 Returns name, verification status, ad count by format, and platforms.`,
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: true,
+  },
   inputSchema: {
     type: 'object' as const,
     properties: {

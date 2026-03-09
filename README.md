@@ -65,6 +65,35 @@ npx gads-transparency-mcp
 | `get_advertiser_profile` | Get an advertiser's profile, verification status, and ad activity summary |
 | `compare_ad_presence` | Compare an advertiser's ad presence across multiple regions |
 
+## Examples
+
+### Example 1: Research competitor ads
+
+**User prompt:** "Show me all ads currently running by Nike in the US"
+
+**Expected behavior:**
+- Calls `search_advertiser` with query "nike.com" and region "US" to find Nike's advertiser ID
+- Then calls `get_advertiser_ads` with the advertiser ID and region "US"
+- Returns a list of Nike's currently running ads with headlines, descriptions, ad format (text/image/video), and thumbnails
+
+### Example 2: Get an advertiser's profile and verification status
+
+**User prompt:** "Show me the advertiser profile for amazon.com"
+
+**Expected behavior:**
+- Calls `search_advertiser` with query "amazon.com" to find Amazon's advertiser ID
+- Then calls `get_advertiser_profile` with the advertiser ID
+- Returns Amazon's advertiser name, Google verification status, total ad count, ad format distribution (text/image/video), and platform presence
+
+### Example 3: Compare ad presence across regions
+
+**User prompt:** "Compare Shopify's ad presence in the US, UK, and India"
+
+**Expected behavior:**
+- Calls `search_advertiser` with query "shopify.com" to find Shopify's advertiser ID
+- Then calls `compare_ad_presence` with the advertiser ID and regions ["US", "GB", "IN"]
+- Returns ad counts and format distribution for each region, highlighting where Shopify is most and least active
+
 ## Use Cases
 
 - **Competitor Ad Research** — See what ads your competitors are running right now
@@ -123,6 +152,12 @@ npx gads-transparency-mcp
 - [Model Context Protocol](https://modelcontextprotocol.io) — The open standard for AI-tool integration
 - [Claude Desktop](https://claude.ai/download) — Anthropic's desktop AI assistant
 - [MCP Server Registry](https://github.com/punkpeye/awesome-mcp-servers) — Curated list of MCP servers
+
+## Privacy Policy
+
+See [PRIVACY.md](./PRIVACY.md) for our complete privacy policy.
+
+**TL;DR:** This extension runs locally on your machine. It accesses only publicly available data from the Google Ads Transparency Center — the same data anyone can view in a browser. No data is collected, stored, or transmitted to any third party by this MCP server. No API keys or authentication required.
 
 ## License
 

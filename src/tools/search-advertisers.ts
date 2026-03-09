@@ -31,6 +31,12 @@ Use this tool to:
 - Discover related advertisers in a market
 
 Returns advertiser ID, name, verification status, and total ad count.`,
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: true,
+  },
   inputSchema: {
     type: 'object' as const,
     properties: {

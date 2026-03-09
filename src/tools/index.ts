@@ -13,6 +13,12 @@ import { compareAdPresenceTool } from './regional-analysis.js';
 export interface McpTool {
   name: string;
   description: string;
+  annotations: {
+    readOnlyHint: boolean;
+    destructiveHint: boolean;
+    idempotentHint: boolean;
+    openWorldHint: boolean;
+  };
   inputSchema: {
     type: 'object';
     properties: Record<string, unknown>;

@@ -35,6 +35,12 @@ Use this tool to:
 - Deep dive into a specific ad creative
 
 Returns full content, media URLs, targeting info, and run dates.`,
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: true,
+  },
   inputSchema: {
     type: 'object' as const,
     properties: {

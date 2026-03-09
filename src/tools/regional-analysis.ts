@@ -37,6 +37,12 @@ Use this tool to:
 - Find markets where a brand isn't advertising yet
 
 Returns ad counts and format distribution per region.`,
+  annotations: {
+    readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
+    openWorldHint: true,
+  },
   inputSchema: {
     type: 'object' as const,
     properties: {

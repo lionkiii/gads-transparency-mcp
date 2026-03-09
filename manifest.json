@@ -1,0 +1,52 @@
+{
+  "manifest_version": "0.3",
+  "name": "gads-transparency-mcp",
+  "display_name": "Google Ads Transparency",
+  "version": "1.0.0",
+  "description": "Research competitor ads from Google Ads Transparency Center — search advertisers, analyze ad creatives, and compare ad presence across 42 regions.",
+  "author": {
+    "name": "Aashish",
+    "url": "https://github.com/lionkiii"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "dist/index.js",
+    "mcp_config": {
+      "command": "npx",
+      "args": ["-y", "gads-transparency-mcp"]
+    }
+  },
+  "tools": [
+    {
+      "name": "search_advertiser",
+      "description": "Search for advertisers by website domain or brand name"
+    },
+    {
+      "name": "get_advertiser_ads",
+      "description": "Get all ads currently running for a specific advertiser"
+    },
+    {
+      "name": "get_ad_details",
+      "description": "Get detailed information about a specific ad creative"
+    },
+    {
+      "name": "get_advertiser_profile",
+      "description": "Get advertiser profile, verification status, and ad activity summary"
+    },
+    {
+      "name": "compare_ad_presence",
+      "description": "Compare ad presence across multiple geographic regions"
+    }
+  ],
+  "privacy_policies": [
+    "https://github.com/lionkiii/gads-transparency-mcp/blob/main/PRIVACY.md"
+  ],
+  "compatibility": {
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  }
+}
